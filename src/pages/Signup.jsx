@@ -604,7 +604,7 @@ const ca_code=()=>{
   {/* Image Section (Visible on Desktop) */}
   <div style={{padding:"20px"}} className="hidden md:block w-1/2">
     <img 
-      src="https://www.ecell-iitkgp.org/images/logo-white.png" 
+      src="src/assets/E-Cell Logo Black_Original.png" 
       alt="Signup Illustration" 
       className="object-cover h-full w-full"
     />

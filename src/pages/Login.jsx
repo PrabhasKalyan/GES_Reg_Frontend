@@ -50,7 +50,7 @@ const Login = () => {
   {/* Image Section (Visible on Desktop) */}
   <div style={{padding:"20px"}} className="hidden md:block w-1/2">
     <img 
-      src="https://media.licdn.com/dms/image/v2/C561BAQEoYtizEsXUTg/company-background_10000/company-background_10000/0/1628675301397/ecellkgp_cover?e=2147483647&v=beta&t=dJVZTdE-SYsJ0ffg3LGbe01UM9_jPyvRI12kzikPIrE" 
+      src="src/assets/E-Cell Logo Black_Original.png" 
       alt="Signup Illustration" 
       className="object-cover h-full w-full"
     />
