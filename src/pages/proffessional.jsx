@@ -4,6 +4,7 @@ import { CardContent } from "../components/ui/card";
 import { Separator } from "../components/ui/separator";
 import PageTitle from "../components/ui/PageTitle";
 import axios from "axios";
+import {Button} from "../components/ui/button";
 
 const ProfessionalProfile = () => {
   const [data, setData] = useState(null);

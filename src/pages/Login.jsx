@@ -29,11 +29,15 @@ const Login = () => {
       const response = await axios.post("/api/v1/token/", formData);
 
       const accessToken = response.data.access;
-      console.log('Access Token:', accessToken);
+      // console.log('Access Token:', accessToken);
       localStorage.setItem('jwtToken', accessToken);
   
       setMessage("Login Successful!");
-      navigate("/");
+      // setTimeout(() => {
+      //   navigate("/");
+      // }, 1500);
+
+      
   
       console.log("Login Success");
     } catch (err) {
@@ -41,7 +45,6 @@ const Login = () => {
       console.error("Login Error:", err.response?.data || err.message);
       setMessage("Login Failed. Please try again.");
     }
-    navigate("/");
   };
   
 
