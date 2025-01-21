@@ -4,8 +4,9 @@ import { Navigate } from "react-router-dom";
 const Logout = () => {
     localStorage.removeItem("jwtToken"); 
     console.log("User logged out successfully");
-
-    return <Navigate to="/login" />;
+    setTimeout(() => {
+        window.location.href = "/login";
+      }, 100);
 };
 
 export default Logout;

@@ -199,7 +199,9 @@ const Signup = () => {
             .catch(()=>setMessage("Unexpected Occurred"));
             console.log(roleData);
       }
-      navigate("/");
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 100);
       
     } catch {
       setMessage("Unexpected Occurred");

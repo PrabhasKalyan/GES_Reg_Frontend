@@ -33,12 +33,10 @@ const Login = () => {
       localStorage.setItem('jwtToken', accessToken);
   
       setMessage("Login Successful!");
-      // setTimeout(() => {
-      //   navigate("/");
-      // }, 1500);
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 100);
 
-      
-  
       console.log("Login Success");
     } catch (err) {
 
