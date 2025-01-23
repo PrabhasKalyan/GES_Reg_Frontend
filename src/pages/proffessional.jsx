@@ -50,6 +50,9 @@ const ProfessionalProfile = () => {
             <h2 className="text-3xl font-bold">
               {professional?.user_data?.first_name || "Professional Name"}
             </h2>
+            <h2 className="text-lg font-semibold">
+                {student?.user_data?.ges_id || "N/A"}
+            </h2>
             <p className="text-lg text-gray-600">
               Industry: {professional?.professional_data?.industry || "N/A"}
             </p>

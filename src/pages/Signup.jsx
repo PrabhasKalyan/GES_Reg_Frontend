@@ -22,7 +22,9 @@ const Signup = () => {
     role: "",
     username: "",
     payment_status:"False",
-    ca_code:""
+    ca_code:"",
+    arrival_date:"",
+    // departure_date:"",
   });
 
   const login ={
@@ -117,8 +119,12 @@ const Signup = () => {
       const response= await axios.post('/api/v1/users',formData);
       console.log(response);
       console.log(formData);
+      if (response.status = 200){
+        setStep(2);
+      }
     }catch(err){
       var error =err;
+      console.log(formData);
     }
 
     try {
@@ -150,7 +156,7 @@ const Signup = () => {
       if(error){
         setMessage("Unexpected Error Occured");
       }
-      setStep(2); // Move to the next form
+      // setStep(2); 
     } else {
       // Handle the submission of the second form
       setMessage("Form submitted successfully!");
@@ -269,7 +275,7 @@ const ca_code=()=>{
             </div>
             <div>
               <label htmlFor="year" className="block text-sm font-medium text-gray-700">
-                Year
+                Year of Study
               </label>
               <input
                 type="number"
@@ -430,6 +436,9 @@ const ca_code=()=>{
                 className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
                 required
               >
+                <option value="" disabled>
+                  Stage of Startup
+                </option>
                 <option value="Preseed">Preseed</option>
                 <option value="Seed">Seed</option>
                 <option value="Funding">Funding</option>
@@ -698,7 +707,55 @@ const ca_code=()=>{
           className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
         />
       </div>
-
+      <div>
+        <label htmlFor="shirt_szie" className="block text-sm font-medium text-gray-700">
+          Shirt Size
+        </label>
+        <select
+          type="text"
+          id="shirt_size"
+          name="shirt_size"
+          value={formData.role}
+          onChange={handleChange}
+          className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+          required
+        >
+          <option value="" disabled>
+            Select your Shirt Size
+          </option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+      </div>
+      <div style={{display:"flex",justifyContent:"space-between"}}>
+        <div>
+          <label htmlFor="arrival_date" className="block text-sm font-medium text-gray-700">
+              Arrival Date
+          </label>
+          <input 
+              type="date" 
+              name="arrival_date"
+              value={formData.arrival_date} 
+              onChange={handleChange} 
+              className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+            />
+        </div>
+        {/* <div>
+          <label htmlFor="departure_date" className="block text-sm font-medium text-gray-700">
+              Departure Date
+          </label>
+          <input 
+              type="date" 
+              name="departure_date"
+              value={formData.departure_date} 
+              onChange={handleChange} 
+              className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+            />
+        </div> */}
+      </div>
       {/* Role */}
       <div>
         <label htmlFor="role" className="block text-sm font-medium text-gray-700">

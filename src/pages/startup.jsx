@@ -48,6 +48,9 @@ const StartupProfile = () => {
             <h2 className="text-3xl font-bold">
               {startup?.startup_data?.startup_name || "Startup Name"}
             </h2>
+            <h2 className="text-lg font-semibold">
+                {student?.user_data?.ges_id || "N/A"}
+            </h2>
             <p className="text-lg text-gray-600">
               Industry: {startup?.startup_data?.industry || "N/A"}
             </p>

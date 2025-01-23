@@ -60,6 +60,9 @@ const StudentProfile = () => {
               <h2 className="text-3xl font-bold">
                 {student?.user_data?.first_name || "N/A"}
               </h2>
+              <h2 className="text-lg font-semibold">
+                {student?.user_data?.ges_id || "N/A"}
+              </h2>
               <p className="text-lg text-gray-600">
                 {student?.student_data?.insti || "N/A"}
               </p>
@@ -91,6 +94,12 @@ const StudentProfile = () => {
                   <p className="text-sm text-gray-600">Department</p>
                   <p className="text-lg font-medium">
                     {student?.student_data?.dept || "N/A"}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-600">Shirt Size</p>
+                  <p className="text-lg font-medium">
+                    {student?.user_data?.shirt_size || "N/A"}
                   </p>
                 </div>
               </div>
