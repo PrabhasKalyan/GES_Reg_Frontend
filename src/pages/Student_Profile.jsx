@@ -45,7 +45,7 @@ const StudentProfile = () => {
 
       {/* Main Content */}
       <div className="flex-grow flex flex-col items-center justify-center py-8 px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-3xl">
+        <div style={{transform: "translateX(-20px)"}} className="bg-white rounded-lg shadow-lg p-8 w-full max-w-3xl">
           <PageTitle title="Student Profile" className="text-center mb-6" />
 
           {/* Profile Picture and Name */}

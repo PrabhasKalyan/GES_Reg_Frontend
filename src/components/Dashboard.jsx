@@ -116,7 +116,7 @@ export default function Home({data}) {
   return (
     <div className="flex flex-col gap-5 w-full overflow-auto">
       <PageTitle title="Dashboard"/>
-      <section className="grid w-full grid-cols-1 gap-4 gap-x-8 transition-all sm:grid-cols-2 xl:grid-cols-4">
+      <section  className="flex justify-center sm:flex-nowrap flex-wrap gap-10">
         {/* {cardData.map((data, index) => (
           <Card 
             key={index}
@@ -127,14 +127,13 @@ export default function Home({data}) {
           />
         ))} */}
 
-        <Card
+        {/* <Card
             amount={data.contingent_data.target_regs}
             description="Target"
             icon={Users}
             label="Target" 
             discription={data.contingent_data.insti} 
-              />
-
+              /> */}
         <Card
           amount={data?.contingent_data?.no_of_regs || 0}
           description="No.of Regs"
@@ -150,7 +149,7 @@ export default function Home({data}) {
           discription={data.contingent_data.insti} 
             />
         <Card
-          amount={data.contingent_data.target_regs-confirmed()}
+          amount={data.contingent_data.no_of_regs-confirmed()}
           description="Unconfirmed Regs"
           icon={Users}
           label="Unconfirmed Regs" 

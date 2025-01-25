@@ -47,13 +47,13 @@ const Login = () => {
   
 
   return (
-    <div className="bg-gray-100 flex flex-col md:flex-row items-center justify-center min-h-screen">
+    <div className="login bg-gray-100 flex flex-col md:flex-row items-center justify-center min-h-screen">
   {/* Image Section (Visible on Desktop) */}
-  <div style={{padding:"20px"}} className="hidden md:block w-1/2">
+  <div style={{padding:"20px"}} className="w-full md:w-1/2 flex justify-center md:justify-start p-5 md:p-0">
     <img 
-      src="src/assets/E-Cell Logo Black_Original.png" 
+      src="src/assets/ges (1).png" 
       alt="Signup Illustration" 
-      className="object-cover h-full w-full"
+      className="ges_logo object-cover h-full w-full"
     />
   </div>
 

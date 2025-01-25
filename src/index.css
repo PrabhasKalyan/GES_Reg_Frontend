@@ -80,3 +80,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media (max-width: 768px) {
+.ges_logo {
+top: 10px;
+height: auto;
+width: 70%; 
+}
+.login {
+  transform: translateY(-70px);
+}
+}
+
+.ges_logo {
+  height: auto;
+  width: 70%; 
+  }

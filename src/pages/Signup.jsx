@@ -525,7 +525,7 @@ const ca_code=()=>{
                 required
               />
             </div>
-            <div>
+            {/* <div>
               <label htmlFor="target_regs" className="block text-sm font-medium text-gray-700">
                 Target of No. of Regs
               </label>
@@ -538,7 +538,7 @@ const ca_code=()=>{
                 className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
                 required
               />
-            </div>
+            </div> */}
             <Button
               type="submit"
               // className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"
@@ -611,13 +611,13 @@ const ca_code=()=>{
   
 
   return (
-    <div className="bg-gray-100 flex flex-col md:flex-row items-center justify-center min-h-screen">
+    <div className=" bg-gray-100 flex flex-col md:flex-row items-center justify-center min-h-screen">
   {/* Image Section (Visible on Desktop) */}
-  <div style={{padding:"20px"}} className="hidden md:block w-1/2">
+  <div style={{padding:"10px"}} className="w-full md:w-1/2 flex justify-center md:justify-start p-5 md:p-0">
     <img 
-      src="src/assets/E-Cell Logo Black_Original.png" 
+      src="src/assets/ges (1).png" 
       alt="Signup Illustration" 
-      className="object-cover h-full w-full"
+      className="ges_logo"
     />
   </div>
 
@@ -715,7 +715,7 @@ const ca_code=()=>{
           type="text"
           id="shirt_size"
           name="shirt_size"
-          value={formData.role}
+          value={formData.shirt_size}
           onChange={handleChange}
           className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
           required
@@ -776,7 +776,7 @@ const ca_code=()=>{
           <option value="Student">Student</option>
           <option value="CA">Campus Ambassador</option>
           <option value="Professional">Professional</option>
-          <option value="Contingent">Contingent</option>
+          {/* <option value="Contingent">Contingent</option> */}
           <option value="Startup">Startup</option>
         </select>
       </div>
